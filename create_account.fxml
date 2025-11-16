@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<VBox stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="CreateAccountController" spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 10;">
+    <VBox spacing="15" maxWidth="600" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);">
+        <Text text="Create Account" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+        <HBox spacing="10">
+            <Label text="Account Type" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <ComboBox fx:id="accountType" />
+            <Label text="Class" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <ComboBox fx:id="accountClass" />
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Initial Deposit (BWP)" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <TextField fx:id="initialDeposit" promptText="0.00"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Employer (Cheque only)" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <TextField fx:id="employerName"/>
+        </HBox>
+        <Button text="Create" onAction="#handleCreate" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 36; -fx-font-size: 14px;"/>
+        <Label fx:id="message" style="-fx-text-fill: #e74c3c; -fx-font-size: 13px;"/>
+    </VBox>
+</VBox>

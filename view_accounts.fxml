@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+<VBox stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ViewAccountsController" spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 10;">
+    <VBox spacing="8" maxWidth="500" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);">
+        <Text text="Your Accounts" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+        <ListView fx:id="accountsList" prefHeight="300"/>
+        <Label fx:id="message" style="-fx-text-fill: #7f8c8d;"/>
+    </VBox>
+</VBox>

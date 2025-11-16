@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="TransferController" spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 10;">
+    <VBox spacing="15" maxWidth="500" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);">
+        <Text text="Transfer Funds (BWP)" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+        <HBox spacing="10">
+            <Label text="From Account" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <ComboBox fx:id="fromAccount" prefWidth="300"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="To Account" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <ComboBox fx:id="toAccount" prefWidth="300"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Amount" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <TextField fx:id="amountField" promptText="0.00"/>
+        </HBox>
+        <Button text="Transfer" onAction="#handleTransfer" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-height: 36; -fx-font-size: 14px;"/>
+        <Label fx:id="message" style="-fx-text-fill: #e74c3c; -fx-font-size: 13px;"/>
+    </VBox>
+</VBox>

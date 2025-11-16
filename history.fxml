@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="HistoryController" spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 10;">
+    <VBox spacing="15" maxWidth="700" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0, 0, 2);">
+        <Text text="Transaction History" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #2c3e50;" />
+
+        <HBox spacing="10">
+            <Label text="Account" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+            <ComboBox fx:id="accountBox" prefWidth="250"/>
+        </HBox>
+
+        <TableView fx:id="table" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="typeCol" text="Type"/>
+                <TableColumn fx:id="amountCol" text="Amount"/>
+                <TableColumn fx:id="timeCol" text="Time"/>
+                <TableColumn fx:id="refCol" text="Reference"/>
+                <TableColumn fx:id="balCol" text="Balance After"/>
+            </columns>
+        </TableView>
+
+        <Label fx:id="message" style="-fx-text-fill: #e74c3c; -fx-font-size: 13px;"/>
+    </VBox>
+</VBox>
